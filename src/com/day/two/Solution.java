@@ -4,10 +4,14 @@ import java.util.Scanner;
 
 public class Solution {
 	static void solve(double meal_cost, int tip_percent, int tax_percent) {
-		double tip = meal_cost * (tip_percent/100.0);
-		double tax = meal_cost * (tax_percent/100.0);
+		double tip = calculatePercentage(meal_cost, tip_percent);
+		double tax = calculatePercentage(meal_cost, tax_percent);		
 		System.out.println(Math.round((meal_cost + tip + tax)));
     }
+
+	private static double calculatePercentage(double mealCost, int valuePercentage) {
+		return mealCost * (valuePercentage/100.0);
+	}
 	
 	private static final Scanner scanner = new Scanner(System.in);
 

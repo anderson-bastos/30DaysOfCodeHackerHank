@@ -1,8 +1,8 @@
-package com.day.one;
+package com.hackerhank.DaysOfCodeHackerHank;
 
-import java.util.*;
+import java.util.Scanner;
 
-public class Solution {
+public class DayOne {
 	
     public static void main(String[] args) {
         int i = 4;

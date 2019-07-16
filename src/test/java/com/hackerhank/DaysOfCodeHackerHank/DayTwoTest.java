@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class DayTwoTest {
 	
-	@DisplayName("Day Two Teste")
+	@DisplayName("Day Two Test")
 	@Test
 	public void totalCoastTest() {
 		double actual = DayTwo.totalCoast(12.00, 20, 8);

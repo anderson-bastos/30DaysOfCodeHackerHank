@@ -1,4 +1,4 @@
-package com.hackerhank.DaysOfCodeHackerHank;
+package com.hackerhank.daysofcodehackerhank.day_04;
 
 import java.util.function.IntFunction;
 

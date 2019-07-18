@@ -1,4 +1,4 @@
-package com.hackerhank.DaysOfCodeHackerHank;
+package com.hackerhank.daysofcodehackerhank.day_02;
 
 public class DayTwo {
 	

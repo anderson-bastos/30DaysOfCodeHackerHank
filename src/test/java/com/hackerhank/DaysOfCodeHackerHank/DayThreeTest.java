@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import com.hackerhank.daysofcodehackerhank.day_03.DayThree;
+
 public class DayThreeTest {	
 	
 	@DisplayName("Day Three Test - Check id number is Odd")

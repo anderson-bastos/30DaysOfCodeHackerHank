@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import com.hackerhank.daysofcodehackerhank.day_04.DayFour;
+
 public class DayFourTest {
 	
 	@DisplayName("Day Four")

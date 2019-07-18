@@ -1,4 +1,4 @@
-package com.hackerhank.DaysOfCodeHackerHank;
+package com.hackerhank.daysofcodehackerhank.day_03;
 
 import java.util.stream.IntStream;
 

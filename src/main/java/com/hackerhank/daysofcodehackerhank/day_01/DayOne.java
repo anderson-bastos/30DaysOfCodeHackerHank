@@ -1,4 +1,4 @@
-package com.hackerhank.DaysOfCodeHackerHank;
+package com.hackerhank.daysofcodehackerhank.day_01;
 
 import java.util.Scanner;
 

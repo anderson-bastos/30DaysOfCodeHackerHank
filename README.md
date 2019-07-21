@@ -52,3 +52,6 @@ Given a string, **S** , of length **N**  that is indexed from **0** to **N-1**, 
 
 ## [Day 7] Arrays
 Given an array, **A**, of **N**  integers, print **A**'s elements in reverse order as a single line of space-separated numbers.
+
+## [Day 8] Dictionaries and Maps
+Given **n** names and phone numbers, assemble a phone book that maps friends' names to their respective phone numbers. You will then be given an unknown number of names to query your phone book for. For each **name** queried, print the associated entry from your phone book on a new line in the form name=phoneNumber; if an entry for **name** is not found, print Not found instead.

@@ -1,18 +1,17 @@
 package com.hackerhank.daysofcodehackerhank.day_08;
 
-import java.util.Dictionary;
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class DictionaryPhoneBook {
 
-	static Dictionary<String, Integer> phoneBook = new Hashtable<>();
+	static HashMap<String, Integer> phoneBook = new HashMap<>();
 
 	public static void insertContact(String name, int phone) {
 		phoneBook.put(name, phone);
 	}
 	
-	private static String findContact(String s) {
+	public static String findContact(String s) {
 		String result = "Not found";
 		Integer phone = phoneBook.get(s);
 		if(phone != null) 

@@ -18,8 +18,8 @@ public class DictionaryPhoneBook {
 			result = String.format("%s=%d", s, phone);
 		return result; 
 	}
-
-	public static void main(String []argh){
+	
+	public static void main(String []args){
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();        
         for(int i = 0; i < n; i++){

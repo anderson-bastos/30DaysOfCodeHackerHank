@@ -1,3 +1,4 @@
+
 # 30 Days of Code 
 
 https://www.hackerrank.com/domains/tutorials/30-days-of-code
@@ -104,7 +105,7 @@ public static String checkIfWeirdNumber(int number) {
 ### Day 4 - Arrays
 Write a Person class with an instance variable, **age** , and a constructor that takes an integer, **initialAge** , as a parameter. The constructor must assign  to  after confirming the argument passed as **initialAge** is not negative; if a negative argument is passed as **initialAge** , the constructor should set **age**  to **0** and print **Age is not valid, setting age to 0.**. In addition, you must write the following instance methods:
 
-1. yearPasses() should increase the ** age** instance variable by **1**.
+1. yearPasses() should increase the **age** instance variable by **1**.
 2. amIOld() should perform the following conditional actions:
 - If age < 13, print You are young..
 - If age >= 13  and age < 18 , print You are a teenager..
@@ -221,11 +222,9 @@ Given **n** names and phone numbers, assemble a phone book that maps friends' na
 ##### Solution:
 ```java
 static HashMap<String, Integer> phoneBook = new HashMap<>();
-
 public static void insertContact(String name, int phone) {
-	phoneBook.put(name, phone);
+  phoneBook.put(name, phone);
 }
-
 public static String findContact(String s) {
 	String result = "Not found";
 	Integer phone = phoneBook.get(s);
@@ -233,39 +232,33 @@ public static String findContact(String s) {
 		result = String.format("%s=%d", s, phone);
 	return result; 
 }
-
-public static void main(String []argh){
+public static void main(String []args) {
     Scanner in = new Scanner(System.in);
     int n = in.nextInt();        
     for(int i = 0; i < n; i++){
         String name = in.next();
         int phone = in.nextInt();
-        // Write code here
         insertContact(name, phone);
-    }
-    
+    }        
     while(in.hasNext()){
         String s = in.next();
-        // Write code here
         System.out.println(findContact(s));
     }
     in.close();
 }
 ```
-
 ### Day 9 - Recursion 3
 Write a factorial function that takes a positive integer, **N** as a parameter and prints the result **N!** of  (**N** factorial).
-
 ##### Solution:
 ```java
 static int factorial(int n) {
-	if(n <= 1)
-		return 1;
-	return n * factorial(n-1);
+  if(n <= 1)
+	return 1;
+  return n * factorial(n-1);
 }
 ```
 
-## Day 10 - Binary Numbers
+### Day 10 - Binary Numbers
 Given a base-**10** integer, **n** , convert it to binary (base-**2**). Then find and print the base-**10** integer denoting the maximum number of consecutive **1**'s in **n**'s binary representation.
 
 ##### Solution:
@@ -317,39 +310,35 @@ You are given two classes, Person and Student, where Person is the base class an
 
 Complete the Student class by writing the following:
 - A Student class constructor, which has **4**  parameters:
-     1.A string, **firstName**
-	 2.A string, **lastName**
-	 3.An integer, **id**
-	 4.An integer array (or vector) of test scores, **scores**.
+     1. A string, **firstName**
+	 2. A string, **lastName**
+	 3. An integer, **id**
+	 4. An integer array (or vector) of test scores, **scores**.
 - A char calculate() method that calculates a Student object's average and returns the grade character representative of their calculated average:
 
 ![](https://s3.amazonaws.com/hr-challenge-images/17165/1458142706-3073bc9143-Grading.png)
 
 ##### Solution:
 ```java
-public class Person {
-	
+public class Person {	
 	protected String firstName;
 	protected String lastName;
 	protected int idNumber;
-
-	// Constructor
-	Person(String firstName, String lastName, int identification) {
+	
+	public Person(String firstName, String lastName, int identification) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.idNumber = identification;
 	}
-
-	// Print person data
+	
 	public void printPerson() {
 		System.out.println("Name: " + lastName + ", " + firstName + "\nID: " + idNumber);
 	}
 }
 
-public class Student extends Person {
-	
+public class Student extends Person {	
 	private int[] testScores;
-
+	
 	public Student(String firstName, String lastName, int identification, int[] testScores) {
 		super(firstName, lastName, identification);
 		this.testScores = testScores;

@@ -387,6 +387,7 @@ Given a Book class and a Solution class, write a MyBook class that does the foll
 
 ##### Solution:
 ```java
+
 public abstract class Book {	
 	public String title;
     public String author;

@@ -16,6 +16,7 @@ Complete the code in the editor below. The variables **i**,**d**, and **s**  are
   -   Concatenate  with the string you read as input and print the result on a new line.
   
 ##### Solution:
+```java
 	int i = 4;
 	double d = 4.0;
 	String s = "HackerRank ";

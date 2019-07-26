@@ -389,7 +389,7 @@ Given a Book class and a Solution class, write a MyBook class that does the foll
 ```java
 
 public abstract class Book {	
-	public String title;
+    public String title;
     public String author;
     
     Book(String title, String author) {
@@ -401,14 +401,14 @@ public abstract class Book {
 
 public class MyBook extends Book {
 	
-	public int price = 0;
+    public int price = 0;
 	
-	MyBook(String title, String author, int price) {
-		super(title, author);
-		this.price = price;
-	}
+    MyBook(String title, String author, int price) {
+       super(title, author);
+       this.price = price;
+    }
 
-	@Override
+    @Override
     void display() {
         System.out.println("Title: " + this.title);
         System.out.println("Author: " + this.author);

@@ -1,4 +1,5 @@
 
+
 # 30 Days of Code 
 
 https://www.hackerrank.com/domains/tutorials/30-days-of-code
@@ -369,4 +370,47 @@ public class Student extends Person {
 	}
 }
 ```
+### Day 13 - Abstract Classes
+Given a Book class and a Solution class, write a MyBook class that does the following:
 
+- Inherits from Book
+- Has a parameterized constructor taking these **3** parameters:
+  1. string **title**
+  2. string **author** 
+  3. string **price**
+- Implements the _Book_ class' abstract _display()_ method so it prints these lines:
+  1. **Title**: a space, and then the current instance's **title**
+  2. **Author**: a space, and then the current instance's **author**
+  3. **Price**: a space, and then the current instance's **price**
+  
+  **Note:** Because these classes are being written in the same file, you must not use an access modifier (e.g.: ) when declaring _MyBook_ or your code will not execute.
+
+##### Solution:
+```java
+public abstract class Book {	
+	public String title;
+    public String author;
+    
+    Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }    
+    abstract void display();
+}
+
+public class MyBook extends Book {
+	
+	public int price = 0;
+	
+	MyBook(String title, String author, int price) {
+		super(title, author);
+		this.price = price;
+	}
+
+	@Override
+    void display() {
+        System.out.println("Title: " + this.title);
+        System.out.println("Author: " + this.author);
+        System.out.println("Price: " + this.price);
+    }
+}

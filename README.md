@@ -15,7 +15,7 @@ Complete the code in the editor below. The variables **i**,**d**, and **s**  are
    -   Print the sum of  plus your double variable to a scale of one decimal place on a new line.
   -   Concatenate  with the string you read as input and print the result on a new line.
   
-#####Solution:
+##### Solution:
 	int i = 4;
 	double d = 4.0;
 	String s = "HackerRank ";

@@ -3,3 +3,4 @@ description: [Improve your coding skills by coding for 30 days]
 show_downloads: ["true"]
 theme: jekyll-theme-cayman
 language: java
+google_analytics: [UA-144702039-1]

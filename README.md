@@ -416,3 +416,37 @@ public class MyBook extends Book {
     }
 }
 ```
+
+### Day 14 - Scope
+Complete the Difference class by writing the following:
+- A class constructor that takes an array of integers as a parameter and saves it to the **elements** instance variable.
+- A computeDifference method that finds the maximum absolute difference between any **2** numbers in **N**  and stores it in the **maximumDifference** instance variable.  
+
+##### Solution:
+```java
+public class Difference {
+
+	private int[] elements;
+	public int maximumDifference;
+
+	public Difference(int[] elements) {
+		this.elements = elements;
+		this.maximumDifference = 0;
+	}
+
+	public void computeDifference() {
+		int n = elements.length;
+		for (int i = 0; i < n; i++) {
+			for (int j = 1; j < n; j++) {
+				int difference = calculateDifference(elements[i], elements[j]);
+				if(difference > maximumDifference)
+					maximumDifference = difference;
+			}
+		}
+	}
+	
+	private int calculateDifference(int i, int j) {
+		return i > j ? i - j : j - i;
+	}
+}
+```

@@ -450,7 +450,6 @@ public class Difference {
 	}
 }
 ```
-
 ### Day 15 - Linked List
 Complete the insert function in your editor so that it creates a new Node (pass **data** as the Node constructor argument) and inserts it at the tail of the linked list referenced by the **head** parameter. Once the new node is added, return the reference to the **head** node.
 
@@ -471,5 +470,24 @@ public static Node insert(Node head, int data) {
 		current.next = new Node(data);
 	}
 	return head;
+}
+```
+### Day 16 - Exceptions - String to Integer
+Read a string, **S** , and print its integer value; if **S** cannot be converted to an integer, print Bad String.
+
+**Note:** You must use the String-to-Integer and exception handling constructs built into your submission language. If you attempt to use loops/conditional statements, you will get a **0** score.
+
+##### Solution:
+```java
+public static void main(String[] args) {
+	Scanner in = new Scanner(System.in);
+	String S = in.next();
+	in.close();
+	try {
+		int number = Integer.parseInt(S);
+		System.out.println(number);
+	} catch (NumberFormatException nfe) {
+		System.out.println("Bad String.");
+	}
 }
 ```

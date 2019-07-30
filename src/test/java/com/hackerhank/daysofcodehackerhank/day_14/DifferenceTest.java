@@ -1,4 +1,4 @@
-package com.hackerhank.daysofcodehackerhank;
+package com.hackerhank.daysofcodehackerhank.day_14;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

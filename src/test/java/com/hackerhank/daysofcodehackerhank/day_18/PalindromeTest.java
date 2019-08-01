@@ -20,7 +20,6 @@ public class PalindromeTest {
 		String expected = loadFileOutput("output00.txt");
 
 		String actual = checkIfIsPalindromeTest(input);
-		
 		Assertions.assertEquals(expected, actual);
 	}
 	
@@ -30,8 +29,7 @@ public class PalindromeTest {
 		String input = loadFileInput("input01.txt"); 
 		String expected = loadFileOutput("output01.txt");
 		
-		String actual = checkIfIsPalindromeTest(input);
-		
+		String actual = checkIfIsPalindromeTest(input);		
 		Assertions.assertEquals(expected, actual);
 	}
 	

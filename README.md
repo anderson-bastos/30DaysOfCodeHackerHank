@@ -573,6 +573,39 @@ class Calculator implements AdvancedArithmetic {
     }
 }
 ```
+### Day 20 - Sorting
+Given an array, **a** , of size **n**  distinct elements, sort the array in _ascending_  order using the  _Bubble Sort_  algorithm above. Once sorted, print the following **3** lines:
+
+1.  Array is sorted in numSwaps swaps.  
+    where  is the number of swaps that took place.
+2.  First Element: firstElement  
+    where  is the  _first_  element in the sorted array.
+3.  Last Element: lastElement  
+    where  is the  _last_  element in the sorted array.
+
+**Hint:**  To complete this challenge, you will need to add a variable that keeps a running tally of  _all_  swaps that occur during execution.
+##### Solution:
+```java
+public static int getNumberOfSwaps(int[] arr) {
+    int n = arr.length;
+    int numberTotalOfSwaps = 0;
+    for (int i = 0; i < n; i++) {
+        int numberOfSwaps = 0;
+        for (int j = 0; j < n - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int aux = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = aux;
+                numberOfSwaps++;
+            }
+        }
+        if (numberOfSwaps == 0)
+            break;
+        numberTotalOfSwaps += numberOfSwaps;
+    }
+    return numberTotalOfSwaps;
+}
+```
 ### Day 21 - Generics
 Write a single generic function named printArray; this function must take an array of generic elements as a parameter (the exception to this is C++, which takes a vector). The locked Solution class in your editor tests your function.
 

@@ -573,3 +573,18 @@ class Calculator implements AdvancedArithmetic {
     }
 }
 ```
+### Day 21 - Generics
+Write a single generic function named printArray; this function must take an array of generic elements as a parameter (the exception to this is C++, which takes a vector). The locked Solution class in your editor tests your function.
+
+**Note:** You must use generics to solve this challenge. Do not write overloaded functions.
+
+##### Solution:
+```java
+class Printer <T> {
+    void printArray(T[] printer) {
+        for (int i = 0; i < printer.length; i++) {
+            System.out.println(printer[i]);
+        }
+    }
+}
+```

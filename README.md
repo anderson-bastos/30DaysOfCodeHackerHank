@@ -621,3 +621,15 @@ class Printer <T> {
     }
 }
 ```
+### Day 22 - Binary Search Trees
+The height of a binary search tree is the number of edges between the tree's root and its furthest leaf. You are given a pointer, **root** , pointing to the root of a binary search tree. Complete the getHeight function provided in your editor so that it returns the height of the binary search tree.
+
+##### Solution:
+```java
+public static int getHeight(Node root) {
+	if(root == null)
+		return -1;
+	return 1 + Math.max(getHeight(root.left), getHeight(root.right));
+}
+
+```

@@ -18,14 +18,13 @@ public class BinarySearchTree {
 	static int height(Node root) {
 		if (root == null)
 			return 0;
-		else {
-			int leftHeight = height(root.left);
-			int rightHeight = height(root.right);
+		
+		int leftHeight = height(root.left);
+		int rightHeight = height(root.right);
 
-			if (leftHeight > rightHeight)
-				return (leftHeight + 1);			
-			return (rightHeight + 1);
-		}
+		if (leftHeight > rightHeight)
+			return (leftHeight + 1);			
+		return (rightHeight + 1);		
 	}
 
 	static void printGivenLevel(Node root, int level) {

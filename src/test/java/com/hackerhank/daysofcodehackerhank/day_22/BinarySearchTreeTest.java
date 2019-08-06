@@ -8,6 +8,8 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 
+import com.hackerhank.daysofcodehackerhank.day_22.BinarySearchTree;
+import com.hackerhank.daysofcodehackerhank.day_22.Node;
 import com.hackerhank.daysofcodehackerhank.util.FileTestCaseUtil;
 
 @TestMethodOrder(OrderAnnotation.class)

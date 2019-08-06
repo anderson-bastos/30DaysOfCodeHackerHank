@@ -2,8 +2,8 @@ package com.hackerhank.daysofcodehackerhank.day_22;
 
 public class Node {
 	
-	Node left, right;
-	int data;
+	public Node left, right;
+	public int data;
 
 	Node(int data) {
 		this.data = data;

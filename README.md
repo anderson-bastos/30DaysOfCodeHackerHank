@@ -633,3 +633,68 @@ public static int getHeight(Node root) {
 }
 
 ```
+
+### Day 23 - BST Level-Order Traversal
+A level-order traversal, also known as a breadth-first search, visits each level of a tree's nodes from left to right, top to bottom. You are given a pointer, **root** , pointing to the root of a binary search tree. Complete the levelOrder function provided in your editor so that it prints the level-order traversal of the binary search tree.
+
+**Hint:** You'll find a queue helpful in completing this challeng
+
+##### Solution:
+```java
+static void levelOrder(Node root) {
+	int h = height(root);
+	int i;
+	for (i = 1; i <= h; i++)
+		printGivenLevel(root, i);
+}
+
+static int height(Node root) {
+	if (root == null)
+		return 0;
+	
+	int leftHeight = height(root.left);
+	int rightHeight = height(root.right);
+
+	if (leftHeight > rightHeight)
+		return (leftHeight + 1);			
+	return (rightHeight + 1);		
+}
+
+static void printGivenLevel(Node root, int level) {
+	if (root == null)
+		return;
+	if (level == 1)
+		System.out.print(root.data + " ");
+	else if (level > 1) {
+		printGivenLevel(root.left, level - 1);
+		printGivenLevel(root.right, level - 1);
+	}
+}
+```
+### Day 24 - More Linked Lists
+A Node class is provided for you in the editor. A Node object has an integer data field, **data** , and a Node instance pointer, **next** , pointing to another node (i.e.: the next node in a list).
+
+A removeDuplicates function is declared in your editor, which takes a pointer to the **head**  node of a linked list as a parameter. Complete removeDuplicates so that it deletes any duplicate nodes from the list and returns the head of the updated list.
+
+**Note:** The **head** pointer may be null, indicating that the list is empty. Be sure to reset your **next** pointer when performing deletions to avoid breaking the list.
+
+##### Solution:
+```java
+public static Node removeDuplicates(Node head) {
+	Node previus = head;
+	Node current = null;		
+    while (previus != null && previus.next != null) {
+        current = previus;
+        while (current.next != null) {
+            if (previus.data == current.next.data) {
+                current.next = current.next.next;
+            } else { 
+            	current = current.next;                    
+            } 
+        } 
+        previus = previus.next;            
+    } 
+	return head;
+}
+```
+

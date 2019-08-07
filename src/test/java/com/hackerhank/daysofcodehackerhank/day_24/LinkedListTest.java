@@ -9,7 +9,7 @@ import com.hackerhank.daysofcodehackerhank.util.FileTestCaseUtil;
 
 public class LinkedListTest {
 
-	@Test	
+	@Test
 	public void getHeightTestZero() {
 		Node input = loadFileInput("input00.txt");
 		String expected = loadFileOutput("output00.txt");

@@ -754,4 +754,51 @@ public static int getHackosByDateReceived(LocalDate dateExpected, LocalDate date
 }
 ```
 
+### Day 27 - Testing
+Your company needs a function that meets the following requirements:
+
+<ul>
+<li>For a given array of <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-1-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.395ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 600.5 721.6" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></svg></span> integers, the function returns the index of the element with the minimum value in the array. If there is more than one element with the minimum value, the returned index should be the smallest one.</li>
+<li>If an empty array is passed to the function, it should raise an Exception.</li>
+</ul>
+
+<p>Note: The arrays are indexed from <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-2-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></svg></span>.</p>
+<p>Another co-worker has prepared functions that will perform the testing and validate returned results with expectations. Your task is to implement <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-4-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g></svg></span> classes that will produce test data and the expected results for the testing functions. More specifically:
+function <code>get_array()</code> in <code>TestDataEmptyArray</code> class and functions <code>get_array()</code> and <code>get_expected_result()</code> in classes <code>TestDataUniqueValues</code> and <code>TestDataExactlyTwoDifferentMinimums</code> following the below specifications:</p>
+
+<ul>
+<li><code>get_array()</code> method in class <code>TestDataEmptyArray</code> has to return an empty array.</li>
+<li><code>get_array()</code> method in class <code>TestDataUniqueValues</code> has to return an array of size at least 2 with all unique elements, while method <code>get_expected_result()</code> of this class has to return the expected minimum value index for this array.</li>
+<li><code>get_array()</code> method in class <code>TestDataExactlyTwoDifferentMinimums</code> has to return an array where there are exactly two different minimum values, while method <code>get_expected_result()</code> of this class has to return the expected minimum value index for this array.</li>
+</ul>
+
+##### Solution:
+```java
+static class TestDataEmptyArray {
+    public static int[] get_array() {                        
+        return new int[] {};
+    }
+}
+
+static class TestDataUniqueValues {
+    public static int[] get_array() {                        
+        return new int[] {1, 2, 3, 4};
+    }
+
+    public static int get_expected_result() {           
+        return 0;
+    }
+}
+
+static class TestDataExactlyTwoDifferentMinimums {
+    public static int[] get_array() {
+        return new int[]{ 1, 2, 1 };
+    }
+
+    public static int get_expected_result() {
+       return 0;
+    }
+}
+```
+
 
